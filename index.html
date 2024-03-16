@@ -1,1 +1,27 @@
-Ich bin Joycekst
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASCII zu Binärkonverter</title>
+<script>
+function convertToAsciiAndBinary() {
+    var letter = document.getElementById("letterInput").value;
+    var asciiCode = letter.charCodeAt(0);
+    var binaryCode = asciiCode.toString(2);
+    document.getElementById("asciiOutput").innerHTML = "ASCII-Code: " + asciiCode;
+    document.getElementById("binaryOutput").innerHTML = "Binärcode: " + binaryCode;
+}
+</script>
+</head>
+<body>
+
+<h2>Buchstaben in ASCII und Binär konvertieren</h2>
+<p>Gib einen Buchstaben ein:</p>
+<input type="text" id="letterInput" maxlength="1">
+<button onclick="convertToAsciiAndBinary()">Konvertieren</button>
+<p id="asciiOutput"></p>
+<p id="binaryOutput"></p>
+
+</body>
+</html>
